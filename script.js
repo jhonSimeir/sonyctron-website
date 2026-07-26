@@ -1,18 +1,23 @@
-SONYCTRON PREMIUM WEBSITE
+document.getElementById("year").textContent = new Date().getFullYear();
 
-Preview:
-1. Extract the ZIP.
-2. Open index.html in Chrome or Edge.
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.13 });
 
-Publishing:
-- Upload index.html, privacy.html, styles.css, script.js and the assets folder together.
-- Use a company-owned domain.
-- Verify the domain in Google Search Console.
-- Then submit that verified domain in the Google Play Console organization verification flow.
+document.querySelectorAll(".reveal").forEach((element, index) => {
+  element.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+  observer.observe(element);
+});
 
-IMPORTANT BEFORE GOOGLE VERIFICATION:
-- Confirm that the company legal name is exactly correct.
-- Add the registered office address if Google requires it to be visible.
-- Replace sonyctron@gmail.com with a company-domain email when available.
-- Do not add invented client names, awards, download figures or ratings.
-- Review the privacy policy with your accountant or legal adviser where appropriate.
+const pointerLight = document.querySelector(".pointer-light");
+if (pointerLight && window.matchMedia("(pointer:fine)").matches) {
+  window.addEventListener("pointermove", (event) => {
+    pointerLight.style.left = `${event.clientX}px`;
+    pointerLight.style.top = `${event.clientY}px`;
+  }, { passive: true });
+}

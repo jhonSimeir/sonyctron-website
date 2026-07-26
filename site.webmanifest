@@ -1,0 +1,9 @@
+{
+  "name": "Sonyctron Software Engineering Limited",
+  "short_name": "Sonyctron",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#05070b",
+  "theme_color": "#05070b",
+  "icons": []
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jhonsimeir.github.io/sonyctron-website/sitemap.xml
