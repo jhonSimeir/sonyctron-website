@@ -129,6 +129,32 @@ footer{width:min(1380px,calc(100% - 48px));margin:auto;border-top:1px solid var(
 .footer-bottom{display:flex;justify-content:space-between;margin-top:42px;padding-top:21px;border-top:1px solid var(--soft-line);color:#626d79;font-size:9px;letter-spacing:.1em}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:none}
+.product-store-link {
+  position: absolute;
+  bottom: 27px;
+  left: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  font-size: 13px;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.product-store-link span {
+  color: var(--gold);
+}
+
+.product-store-link:hover {
+  color: var(--gold-light);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
 @media(max-width:1000px){
   nav,.header-action{display:none}.site-header,.hero{width:min(100% - 30px,1380px)}
   .hero{grid-template-columns:1fr;padding-top:45px}.hero-copy{padding-left:0}.hero-media{height:560px;min-height:0}
